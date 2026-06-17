@@ -1,0 +1,874 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <link rel="shortcut icon" href="/images/LogoTitleIcon.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MhdJihad | Portofolio</title>
+  </head>
+  <body>
+    <!-- Progress Scroll -->
+    <div class="vertical-progress-container">
+      <div class="vertical-progress-bar" id="verticalBar"></div>
+
+      <div class="scroll-dots">
+        <div class="dot-item" data-section="home">
+          <span class="dot-text"><i class="fa-solid fa-house"></i> Home</span>
+          <div class="dot-circle"></div>
+        </div>
+
+        <div class="dot-item" data-section="about">
+          <span class="dot-text"
+            ><i class="fa-solid fa-user-tie"></i> About</span
+          >
+          <div class="dot-circle"></div>
+        </div>
+
+        <div class="dot-item" data-section="portfolio">
+          <span class="dot-text"
+            ><i class="fa-solid fa-briefcase"></i> Portfolio</span
+          >
+          <div class="dot-circle"></div>
+        </div>
+
+        <div class="dot-item" data-section="contact">
+          <span class="dot-text"
+            ><i class="fa-solid fa-address-book"></i> Kontak</span
+          >
+          <div class="dot-circle"></div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- Nav Logo dengan Gambar di Samping Kiri -->
+        <a href="#" class="nav-logo">
+          <img
+            src="/images/LogoPortofolioMhdJihad.jpeg"
+            alt="Logo MhdJihad"
+            class="logo-img"
+          />
+          <p>Mhd<span>Jihad</span></p>
+        </a>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="toggle navigation"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item">
+            <a href="#home" class="nav-link active"
+              ><i class="fa-solid fa-house"></i> Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link"
+              ><i class="fa-solid fa-user"></i> About</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#portfolio" class="nav-link"
+              ><i class="fa-solid fa-briefcase"></i> Portfolio</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link"
+              ><i class="fa-solid fa-envelope"></i> Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Section Home (Hero) -->
+    <section id="home" class="home-section">
+      <div class="home-container">
+        <!-- Kolom Kiri: Teks & Intro -->
+        <div class="home-content">
+          <h3 class="pre-title">Halo semua, saya</h3>
+          <h1 class="main-title">Mhd <span>Jihad</span></h1>
+          <h2 class="sub-title">
+            Saya seorang <span class="typing-text">Frontend Developer</span>
+          </h2>
+          <p class="home-description">
+            Saya berdedikasi untuk membangun pengalaman digital yang responsif,
+            interaktif, dan berpusat pada pengguna. Mari berkolaborasi untuk
+            mengubah ide hebat Anda menjadi kenyataan digital.
+          </p>
+
+          <!-- Tombol Aksi (CTA) -->
+          <div class="home-buttons">
+            <a href="#portfolio" class="btn btn-primary"
+              >Lihat Karya <i class="fa-solid fa-arrow-right"></i
+            ></a>
+            <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
+          </div>
+
+          <!-- Sosial Media -->
+          <div class="home-socials">
+            <a
+              href="https://tiktok.com/@jiydeveloper"
+              target="_blank"
+              aria-label="TikTok"
+              ><i class="fa-brands fa-tiktok"></i
+            ></a>
+            <a
+              href="https://github.com/muhammadJihad99"
+              target="_blank"
+              aria-label="GitHub"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/jiydeveloper/"
+              target="_blank"
+              aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Kolom Kanan: Foto Profil / Avatar -->
+        <div class="home-img-container">
+          <div class="profile-wrapper">
+            <div class="tech-icon icon-html">
+              <i class="fa-brands fa-html5"></i>
+            </div>
+            <div class="tech-icon icon-css">
+              <i class="fa-brands fa-css3-alt"></i>
+            </div>
+            <div class="tech-icon icon-js"><i class="fa-brands fa-js"></i></div>
+            <div class="tech-icon icon-php">
+              <i class="fa-brands fa-php"></i>
+            </div>
+            <div class="tech-icon icon-mysql">
+              <i class="fa-solid fa-database"></i>
+            </div>
+            <div class="profile-box">
+              <img
+                src="/images/LogoPortofolioMhdJihad.jpeg"
+                alt="Mhd Jihad"
+                class="profile-img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Home (Hero2) -->
+    <section class="home-container">
+      <div class="container">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-code-branch"></i></div>
+          <div class="stat-info">
+            <h3>20+</h3>
+            <p>Projek Selesai</p>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-laptop-code"></i></div>
+          <div class="stat-info">
+            <h3>100%</h3>
+            <p>Responsif Desain</p>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-user-check"></i></div>
+          <div class="stat-info">
+            <h3>15+</h3>
+            <p>Klien Puas</p>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <div class="stat-info">
+            <h3>Clean</h3>
+            <p>& Modern Code</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-services">
+      <div class="services-container">
+        <div class="services-header">
+          <p class="services-subtitle">Apa Yang Saya Lakukan</p>
+          <h2 class="services-title">Layanan Utama</h2>
+          <div class="services-line"></div>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-item">
+            <div class="service-icon-box">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <h3>Frontend Development</h3>
+            <p>
+              Mengubah desain figma/Xd menjadi kode HTML, CSS, dan JavaScript
+              yang bersih, optimal, dan berstandar industri.
+            </p>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon-box">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+            </div>
+            <h3>Responsive Web Design</h3>
+            <p>
+              Memastikan website Anda tampil sempurna dan proporsional di semua
+              ukuran layar, mulai dari smartphone hingga monitor desktop.
+            </p>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon-box">
+              <i class="fa-solid fa-gauge-high"></i>
+            </div>
+            <h3>Web Optimization</h3>
+            <p>
+              Meningkatkan kecepatan loading website dan skor performa agar
+              ramah SEO dan memberikan kenyamanan maksimal bagi pengunjung.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="about-container">
+        <div class="about-header">
+          <p class="about-subtitle">Mengenal Saya Lebih Dekat</p>
+          <h2 class="about-title">Tentang Saya</h2>
+          <div class="about-line"></div>
+        </div>
+
+        <div class="about-content-grid">
+          <div class="about-info">
+            <h3>Siapa Saya?</h3>
+            <p class="about-text">
+              Saya adalah seorang pengembang web
+              <span>Frontend Developer</span> yang berbasis di Indonesia.
+              Memiliki passion yang besar dalam mengubah baris kode menjadi
+              antarmuka website yang indah, interaktif, dan fungsional.
+            </p>
+            <p class="about-text">
+              Fokus utama saya adalah menciptakan kode yang bersih
+              <span>Clean Code</span> dan arsitektur CSS yang modular agar mudah
+              dikembangkan di masa depan. Saya selalu antusias mempelajari
+              teknologi baru untuk meningkatkan efisiensi kerja.
+            </p>
+
+            <div class="about-details">
+              <div class="detail-item">
+                <i class="fa-solid fa-chevron-right"></i>
+                <strong>Pendidikan:</strong> S1 Teknik Informatika
+              </div>
+              <div class="detail-item">
+                <i class="fa-solid fa-chevron-right"></i>
+                <strong>Email:</strong> jiydeveloper@gmail.com
+              </div>
+              <div class="detail-item">
+                <i class="fa-solid fa-chevron-right"></i>
+                <strong>Pekerjaan:</strong> Lepas / Freelance
+              </div>
+              <div class="detail-item">
+                <i class="fa-solid fa-chevron-right"></i>
+                <strong>Domisili:</strong> Kota Padang, Indonesia
+              </div>
+            </div>
+
+            <div class="about-action-wrapper">
+              <button type="button" id="downloadCvBtn" class="download-cv-btn">
+                <span class="btn-progress-bar"></span>
+                <span class="btn-content">
+                  <i class="fa-solid fa-cloud-arrow-down"></i>
+                  <span class="btn-text">Download CV</span>
+                </span>
+              </button>
+
+              <a
+                href="/document/CVMuhammadJihad.jpg"
+                download="CVMuhammadJihad.jpg"
+                id="hiddenDownloadLink"
+                style="display: none"
+              ></a>
+            </div>
+          </div>
+
+          <div class="about-skills">
+            <h3>Keahlian Teknis</h3>
+
+            <div class="skill-bar-box">
+              <div class="skill-info">
+                <span><i class="fa-brands fa-html5"></i> HTML</span>
+                <span>90%</span>
+              </div>
+              <div class="progress-line">
+                <span class="html-progress"></span>
+              </div>
+            </div>
+
+            <div class="skill-bar-box">
+              <div class="skill-info">
+                <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                <span>85%</span>
+              </div>
+              <div class="progress-line">
+                <span class="css-progress"></span>
+              </div>
+            </div>
+
+            <div class="skill-bar-box">
+              <div class="skill-info">
+                <span><i class="fa-brands fa-js"></i> JavaScript</span>
+                <span>75%</span>
+              </div>
+              <div class="progress-line"><span class="js-progress"></span></div>
+            </div>
+
+            <div class="skill-bar-box">
+              <div class="skill-info">
+                <span><i class="fa-brands fa-php"></i> PHP</span>
+                <span>80%</span>
+              </div>
+              <div class="progress-line">
+                <span class="php-progress"></span>
+              </div>
+            </div>
+
+            <div class="skill-bar-box">
+              <div class="skill-info">
+                <span><i class="fa-solid fa-database"></i> MySQL</span>
+                <span>80%</span>
+              </div>
+              <div class="progress-line">
+                <span class="mysql-progress"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Portfolio -->
+    <section id="portfolio" class="portfolio-section">
+      <div class="portfolio-container">
+        <div class="portfolio-header">
+          <p class="portfolio-subtitle">Karya Terbaru</p>
+          <h2 class="portfolio-title">Portfolio Saya</h2>
+          <div class="portfolio-line"></div>
+        </div>
+
+        <div class="portfolio-grid">
+          <div class="portfolio-card">
+            <div class="portfolio-img-box">
+              <img
+                src="/images/LandingPageCoffee.png"
+                alt="Project 1"
+                class="portfolio-img"
+              />
+            </div>
+            <div class="portfolio-info">
+              <h3 class="portfolio-item-title">Website Coffee Shop</h3>
+              <p class="portfolio-item-desc">
+                Desain website modern berkecepatan tinggi untuk kebutuhan Bisnis
+                Coffee Shop Profesional.
+              </p>
+              <span class="read-more-btn">Baca Semuanya</span>
+              <div class="btn-wrapper">
+                <a
+                  href="https://muhammadjihad99.github.io/lightfeelcoffee/"
+                  target="_blank"
+                  class="portfolio-link-btn"
+                  >Kunjungi Website</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="portfolio-img-box">
+              <img
+                src="/images/LandingPageNQZINDO.png"
+                alt="Project 2"
+                class="portfolio-img"
+              />
+            </div>
+            <div class="portfolio-info">
+              <h3 class="portfolio-item-title">Website Guild Gaming</h3>
+              <p class="portfolio-item-desc">
+                Desain website modern berkecepatan tinggi untuk kebutuhan Gaming
+                dan profil Gaming profesional.
+              </p>
+              <span class="read-more-btn">Baca Semuanya</span>
+              <div class="btn-wrapper">
+                <a
+                  href="https://muhammadjihad99.github.io/nqzindo/"
+                  target="_blank"
+                  class="portfolio-link-btn"
+                  >Kunjungi Website</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="portfolio-img-box">
+              <img
+                src="/images/LandingPageAffiliate.png"
+                alt="Project 3"
+                class="portfolio-img"
+              />
+            </div>
+            <div class="portfolio-info">
+              <h3 class="portfolio-item-title">Website Affiliasi</h3>
+              <p class="portfolio-item-desc">
+                Sistem Affiliasi product digital maupun Non Digital yang optimal
+                dan responsif.
+              </p>
+              <span class="read-more-btn">Baca Semuanya</span>
+              <div class="btn-wrapper">
+                <a
+                  href="https://muhammadjihad99.github.io/affilateproduk/"
+                  target="_blank"
+                  class="portfolio-link-btn"
+                  >Kunjungi Website</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="portfolio-img-box">
+              <img
+                src="/images/LandingPageScallingGigi.png"
+                alt="Project 4"
+                class="portfolio-img"
+              />
+            </div>
+            <div class="portfolio-info">
+              <h3 class="portfolio-item-title">Website Scalling Gigi</h3>
+              <p class="portfolio-item-desc">
+                Dirancang untuk kebutuhan klinik gigi dalam memperkenalkan
+                layanan scalling gigi secara online.
+              </p>
+              <span class="read-more-btn">Baca Semuanya</span>
+              <div class="btn-wrapper">
+                <a
+                  href="https://muhammadjihad99.github.io/scallinggigi/"
+                  target="_blank"
+                  class="portfolio-link-btn"
+                  >Kunjungi Website</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="portfolio-img-box">
+              <img
+                src="/images/LandingPageCeritaKami.png"
+                alt="Project 5"
+                class="portfolio-img"
+              />
+            </div>
+            <div class="portfolio-info">
+              <h3 class="portfolio-item-title">Website Cerita Kami</h3>
+              <p class="portfolio-item-desc">
+                Website Cerita Kami merupakan platform berbasis web yang
+                dirancang untuk berbagi cerita, pengalaman, dan inspirasi dalam
+                bentuk tulisan yang mudah diakses oleh pengguna melalui berbagai
+                perangkat.
+              </p>
+              <span class="read-more-btn">Baca Semuanya</span>
+              <div class="btn-wrapper">
+                <a
+                  href="https://muhammadjihad99.github.io/ceritakami/"
+                  target="_blank"
+                  class="portfolio-link-btn"
+                  >Kunjungi Website</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="portfolio-img-box">
+              <img
+                src="/images/LandingPageSekolah.png"
+                alt="Project 6"
+                class="portfolio-img"
+              />
+            </div>
+            <div class="portfolio-info">
+              <h3 class="portfolio-item-title">Website Sekolah</h3>
+              <p class="portfolio-item-desc">
+                Website Sekolah merupakan platform informasi digital yang
+                dirancang untuk memudahkan penyampaian informasi akademik dan
+                non-akademik kepada siswa, guru, orang tua, serta masyarakat.
+                Website ini menampilkan profil sekolah, informasi kegiatan,
+                berita terbaru, data guru, fasilitas, serta berbagai informasi
+                penting lainnya dengan tampilan yang responsif dan mudah
+                diakses.
+              </p>
+              <span class="read-more-btn">Baca Semuanya</span>
+              <div class="btn-wrapper">
+                <a
+                  href="https://muhammadjihad99.github.io/sdn05pangkalan/"
+                  target="_blank"
+                  class="portfolio-link-btn"
+                  >Kunjungi Website</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="portfolio-notice">
+          Saya tidak bisa menampilkan project secara keseluruhan, Jika anda
+          ingin mengetahui lebih lanjut, bisa Hubungi Saya.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact-section">
+      <div class="contact-container">
+        <div class="contact-header">
+          <p class="contact-subtitle">Hubungi Saya</p>
+          <h2 class="contact-title">Mari Bekerja Sama</h2>
+          <div class="contact-line"></div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-wrapper">
+            <h3 class="contact-info-title">Ada Proyek Menarik?</h3>
+            <p class="contact-info-text">
+              Silakan hubungi saya melalui email atau media sosial yang tersedia
+              jika Anda tertarik untuk berkolaborasi.
+            </p>
+            <div class="contact-cards-list">
+              <div class="contact-card-item">
+                <div class="contact-card-icon">📧</div>
+                <div class="contact-card-detail">
+                  <h4>Email Resmi</h4>
+                  <p>jiydeveloper@gmail.com</p>
+                  <a
+                    href="mailto:jiydeveloper@gmail.com"
+                    class="contact-card-link"
+                    >Kirim Email</a
+                  >
+                </div>
+              </div>
+              <div class="contact-card-item">
+                <div class="contact-card-icon">💬</div>
+                <div class="contact-card-detail">
+                  <h4>WhatsApp</h4>
+                  <p>+62 821-7828-3463</p>
+                  <a
+                    href="https://wa.me/6282178283463"
+                    target="_blank"
+                    class="contact-card-link"
+                    >Kirim Pesan</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-wrapper">
+            <form class="contact-form" id="portfolioContactForm" method="POST">
+              <input
+                type="hidden"
+                name="access_key"
+                value="45c2be2c-747f-4011-83f6-41756bc35daf"
+              />
+
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="name"
+                    ><i class="fa-solid fa-user"></i> Nama Lengkap</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Masukkan nama Anda"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="email"
+                    ><i class="fa-solid fa-envelope"></i> Alamat Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Masukkan email Anda"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject"
+                  ><i class="fa-solid fa-pen-to-square"></i> Subjek</label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Judul keperluan Anda"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="message"
+                  ><i class="fa-solid fa-comment-dots"></i> Pesan Anda</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Tuliskan pesan Anda di sini..."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="contact-submit-btn">
+                <i class="fa-solid fa-paper-plane"></i> Kirim Pesan Sekarang
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Babel Popup Success -->
+    <div id="successModal" class="modal-overlay">
+      <div class="modal-box">
+        <div class="success-icon-wrapper">
+          <div class="success-icon-circle">
+            <svg
+              class="checkmark"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 52 52"
+            >
+              <circle
+                class="checkmark-circle"
+                cx="26"
+                cy="26"
+                r="25"
+                fill="none"
+              />
+              <path
+                class="checkmark-check"
+                fill="none"
+                d="M14.1 27.2l7.1 7.2 16.7-16.8"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <h3 class="modal-title">Pesan Terkirim!</h3>
+        <p class="modal-message">
+          Terima kasih telah menghubungi saya. Pesan Anda telah berhasil dikirim
+          langsung ke email <span>jiydeveloper@gmail.com</span>.
+        </p>
+
+        <button type="button" id="closeModalBtn" class="modal-close-btn">
+          Selesai
+        </button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="portfolio-footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <h3>MHD<span>Jihad</span></h3>
+            <p>
+              Membangun pengalaman web yang modern, responsif, dan berkinerja
+              tinggi.
+            </p>
+          </div>
+
+          <div class="footer-socials">
+            <a
+              href="https://github.com/muhammadJihad99"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href="https://tiktok.com/@jiydeveloper"
+              target="_blank"
+              aria-label="TikTok"
+            >
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/jiydeveloper/"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <ul class="footer-nav">
+            <li>
+              <a href="#home"> <i class="fa-solid fa-house"></i> Home </a>
+            </li>
+            <li>
+              <a href="#about">
+                <i class="fa-solid fa-user-tie"></i> About
+              </a>
+            </li>
+            <li>
+              <a href="#portfolio">
+                <i class="fa-solid fa-briefcase"></i> Portfolio
+              </a>
+            </li>
+            <li>
+              <a href="#contact">
+                <i class="fa-solid fa-address-book"></i> Kontak
+              </a>
+            </li>
+          </ul>
+
+          <p class="footer-copyright">
+            &copy; 2026 MhdJihad. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts.js -->
+    <script src="scripts.js"></script>
+    <script>
+      // Contact Form
+      document.addEventListener("DOMContentLoaded", () => {
+        console.log("CONTACT JS LOADED");
+
+        const form = document.getElementById("portfolioContactForm");
+        const successModal = document.getElementById("successModal");
+        const closeModalBtn = document.getElementById("closeModalBtn");
+
+        if (!form) {
+          console.error("Form tidak ditemukan");
+          return;
+        }
+
+        if (!successModal) {
+          console.error("Modal tidak ditemukan");
+          return;
+        }
+
+        const submitBtn = form.querySelector(".contact-submit-btn");
+
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+
+          console.log("FORM SUBMIT DETECTED");
+
+          const originalText = submitBtn.innerHTML;
+
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = "Sedang Mengirim...";
+          submitBtn.style.opacity = "0.7";
+
+          try {
+            const formData = new FormData(form);
+
+            const response = await fetch("https://api.web3forms.com/submit", {
+              method: "POST",
+              body: formData,
+              headers: {
+                Accept: "application/json",
+              },
+            });
+
+            const result = await response.json();
+
+            console.log("WEB3FORMS RESPONSE:", result);
+
+            if (result.success) {
+              form.reset();
+
+              successModal.classList.add("show");
+              document.body.style.overflow = "hidden";
+            } else {
+              alert(result.message || "Gagal mengirim pesan.");
+            }
+          } catch (error) {
+            console.error("WEB3FORMS ERROR:", error);
+            alert("Terjadi kesalahan saat mengirim pesan.");
+          } finally {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
+            submitBtn.style.opacity = "1";
+          }
+        });
+
+        // Tombol tutup modal
+        if (closeModalBtn) {
+          closeModalBtn.addEventListener("click", () => {
+            successModal.classList.remove("show");
+            document.body.style.overflow = "";
+          });
+        }
+
+        // Klik area luar modal
+        successModal.addEventListener("click", (e) => {
+          if (e.target === successModal) {
+            successModal.classList.remove("show");
+            document.body.style.overflow = "";
+          }
+        });
+
+        // Tombol ESC
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && successModal.classList.contains("show")) {
+            successModal.classList.remove("show");
+            document.body.style.overflow = "";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
