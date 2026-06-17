@@ -168,3 +168,50 @@ dotItems.forEach((dot) => {
     }
   });
 });
+
+const securityOverlay = document.getElementById("securityOverlay");
+const closeSecurityBtn = document.getElementById("closeSecurityBtn");
+
+function showAlert() {
+  securityOverlay.classList.add("show");
+}
+
+closeSecurityBtn.addEventListener("click", () => {
+  securityOverlay.classList.remove("show");
+});
+
+document.addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+  showAlert();
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "F12") {
+    e.preventDefault();
+    showAlert();
+  }
+
+  if (
+    e.ctrlKey &&
+    e.shiftKey &&
+    (e.key === "I" ||
+      e.key === "J" ||
+      e.key === "C" ||
+      e.key === "i" ||
+      e.key === "j" ||
+      e.key === "c")
+  ) {
+    e.preventDefault();
+    showAlert();
+  }
+
+  if (e.ctrlKey && (e.key === "U" || e.key === "u")) {
+    e.preventDefault();
+    showAlert();
+  }
+
+  if (e.ctrlKey && (e.key === "S" || e.key === "s")) {
+    e.preventDefault();
+    showAlert();
+  }
+});
