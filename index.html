@@ -22,7 +22,6 @@
     <title>MhdJihad | Portofolio</title>
   </head>
   <body>
-    <!-- Progress Scroll -->
     <div class="vertical-progress-container">
       <div class="vertical-progress-bar" id="verticalBar"></div>
 
@@ -57,7 +56,6 @@
 
     <nav class="navbar">
       <div class="nav-container">
-        <!-- Nav Logo dengan Gambar di Samping Kiri -->
         <a href="#" class="nav-logo">
           <img
             src="images/LogoPortofolioMhdJihad.jpeg"
@@ -100,10 +98,8 @@
       </div>
     </nav>
 
-    <!-- Section Home (Hero) -->
     <section id="home" class="home-section">
       <div class="home-container">
-        <!-- Kolom Kiri: Teks & Intro -->
         <div class="home-content">
           <h3 class="pre-title">Halo semua, saya</h3>
           <h1 class="main-title">Mhd <span>Jihad</span></h1>
@@ -116,7 +112,6 @@
             mengubah ide hebat Anda menjadi kenyataan digital.
           </p>
 
-          <!-- Tombol Aksi (CTA) -->
           <div class="home-buttons">
             <a href="#portfolio" class="btn btn-primary"
               >Lihat Karya <i class="fa-solid fa-arrow-right"></i
@@ -124,7 +119,6 @@
             <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
           </div>
 
-          <!-- Sosial Media -->
           <div class="home-socials">
             <a
               href="https://tiktok.com/@jiydeveloper"
@@ -147,7 +141,6 @@
           </div>
         </div>
 
-        <!-- Kolom Kanan: Foto Profil / Avatar -->
         <div class="home-img-container">
           <div class="profile-wrapper">
             <div class="tech-icon icon-html">
@@ -175,7 +168,6 @@
       </div>
     </section>
 
-    <!-- Section Home (Hero2) -->
     <section class="home-container">
       <div class="container">
         <div class="stat-card">
@@ -375,7 +367,6 @@
       </div>
     </section>
 
-    <!-- Section Portfolio -->
     <section id="portfolio" class="portfolio-section">
       <div class="portfolio-container">
         <div class="portfolio-header">
@@ -440,7 +431,7 @@
           <div class="portfolio-card">
             <div class="portfolio-img-box">
               <img
-                src="images/LandingPageAffiliate.png"
+                src="/LandingPageAffiliate.png"
                 alt="Project 3"
                 class="portfolio-img"
               />
@@ -555,7 +546,6 @@
       </div>
     </section>
 
-    <!-- Section Contact -->
     <section id="contact" class="contact-section">
       <div class="contact-container">
         <div class="contact-header">
@@ -671,7 +661,6 @@
       </div>
     </section>
 
-    <!-- Babel Popup Success -->
     <div id="successModal" class="modal-overlay">
       <div class="modal-box">
         <div class="success-icon-wrapper">
@@ -709,7 +698,6 @@
       </div>
     </div>
 
-    <!-- Footer -->
     <footer class="portfolio-footer">
       <div class="footer-container">
         <div class="footer-top">
@@ -777,10 +765,8 @@
       </div>
     </footer>
 
-    <!-- Scripts.js -->
     <script src="scripts.js"></script>
     <script>
-      // Contact Form
       document.addEventListener("DOMContentLoaded", () => {
         console.log("CONTACT JS LOADED");
 
@@ -845,7 +831,6 @@
           }
         });
 
-        // Tombol tutup modal
         if (closeModalBtn) {
           closeModalBtn.addEventListener("click", () => {
             successModal.classList.remove("show");
@@ -853,7 +838,6 @@
           });
         }
 
-        // Klik area luar modal
         successModal.addEventListener("click", (e) => {
           if (e.target === successModal) {
             successModal.classList.remove("show");
@@ -861,7 +845,6 @@
           }
         });
 
-        // Tombol ESC
         document.addEventListener("keydown", (e) => {
           if (e.key === "Escape" && successModal.classList.contains("show")) {
             successModal.classList.remove("show");
