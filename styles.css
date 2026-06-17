@@ -1,4 +1,3 @@
-/* Reset & Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -20,47 +19,42 @@ body {
   background-color: var(--bg-dark);
 }
 
-/* Progress Scroll */
-/* --- VERTICAL SCROLL PROGRESS STYLES --- */
 .vertical-progress-container {
   position: fixed;
   right: 30px;
   top: 50%;
   transform: translateY(-50%);
-  height: 250px; /* Tinggi total lintasan garis */
+  height: 250px;
   width: 4px;
-  background: rgba(255, 255, 255, 0.1); /* Warna dasar garis (sebelum terisi) */
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  z-index: 999; /* Berada di atas seluruh section */
+  z-index: 999;
   display: flex;
   justify-content: center;
 }
 
-/* Garis Progress yang Akan Mengisi saat Scroll */
 .vertical-progress-bar {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 0%; /* Diatur dinamis lewat JS */
-  background: var(--primary-color, #00adb5); /* Warna isi cyan */
+  height: 0%;
+  background: var(--primary-color, #00adb5);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 173, 181, 0.5);
   transition: height 0.1s linear;
 }
 
-/* Kontainer Dot / Titik */
 .scroll-dots {
   position: absolute;
   top: 0;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Membagi rata titik dari atas ke bawah garis */
+  justify-content: space-between;
   align-items: center;
 }
 
-/* Item Titik + Teks */
 .dot-item {
   position: relative;
   display: flex;
@@ -71,7 +65,6 @@ body {
   height: 20px;
 }
 
-/* Lingkaran Kecil Indikator */
 .dot-circle {
   width: 10px;
   height: 10px;
@@ -82,10 +75,9 @@ body {
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Teks Menu di Samping Kiri Titik */
 .dot-text {
   position: absolute;
-  right: 25px; /* Jarak dari titik */
+  right: 25px;
   color: #ffffff;
   background: #222222;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -100,9 +92,7 @@ body {
   pointer-events: none;
 }
 
-/* --- LOGIKA HOVER & AKTIF --- */
 
-/* Efek saat Kursor Menyorot Titik (Hanya Aktif di Perangkat yang Memiliki Kursor/Mouse) */
 @media (hover: hover) {
   .dot-item:hover .dot-text {
     opacity: 1;
@@ -115,7 +105,6 @@ body {
   }
 }
 
-/* Tampilan Otomatis saat Menu Sedang Aktif (Ter-scroll) */
 .dot-item.active .dot-circle {
   background: var(--primary-color, #00adb5);
   border-color: #1a1a1a;
@@ -130,38 +119,33 @@ body {
   border-color: var(--primary-color, #00adb5);
 }
 
-/* --- RESPONSIVITAS MEDIA QUERIES --- */
 
-/* 1. Ukuran Layar Tablet (Lebar Maksimal 1024px) */
 @media screen and (max-width: 1024px) {
   .vertical-progress-container {
-    right: 15px; /* Digeser lebih merapat ke tepi agar tidak menabrak teks konten */
-    height: 200px; /* Diperpendek sedikit */
+    right: 15px;
+    height: 200px;
   }
 
-  /* Sembunyikan pop-up teks menu bawaan di tablet agar tidak menutupi layar saat scroll */
   .dot-text {
     display: none !important;
   }
 }
 
-/* 2. Ukuran Layar Smartphone (Lebar Maksimal 768px) */
 @media screen and (max-width: 768px) {
   .vertical-progress-container {
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
-    height: 4px; /* Sedikit dipertebal agar lebih terlihat di HP */
+    height: 4px;
     transform: none;
     border-radius: 0;
     background: rgba(255, 255, 255, 0.1);
-    /* Naikan z-index agar mutlak berada di atas Navbar bawaan */
     z-index: 10000 !important;
   }
 
   .vertical-progress-bar {
-    width: 0%; /* Diisi dinamis oleh JS baru di atas */
+    width: 0%;
     height: 100% !important;
     border-radius: 0;
   }
@@ -177,10 +161,9 @@ body {
   color: var(
     --primary-color,
     #00adb5
-  ); /* Warna ikon disamakan dengan tema cyan portofoliomu */
+  );
 }
 
-/* Memastikan susunan teks dan ikon sejajar secara vertikal */
 .dot-text {
   display: flex;
   align-items: center;
@@ -189,11 +172,12 @@ body {
 .nav-links a.active,
 .nav-menu a.active,
 .navbar-nav a.active {
-  color: var(--primary-color, #00adb5) !important; /* Berubah warna jadi cyan */
+  color: var(--primary-color, #00adb5) !important;
   font-weight: 700;
 }
 
-/* Navbar Styles */
+
+/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -223,14 +207,14 @@ body {
 
   display: flex;
   align-items: center;
-  gap: 12px; /* Mengatur jarak antara gambar dan teks nama */
+  gap: 12px;
 }
 
 .logo-img {
-  width: 40px; /* Atur lebar gambar sesuai kebutuhan */
-  height: 40px; /* Atur tinggi gambar sesuai kebutuhan */
-  object-fit: cover; /* Menjaga proporsi gambar agar tidak gepeng */
-  border-radius: 50%; /* Opsional: membuat logo berbentuk lingkaran jika gambarnya square */
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .nav-logo p {
@@ -240,7 +224,6 @@ body {
   color: var(--primary-color);
 }
 
-/* Menu Desktop */
 .nav-menu {
   display: flex;
   list-style: none;
@@ -257,10 +240,9 @@ body {
   transition: color var(--transition-speed) ease;
   display: flex;
   align-items: center;
-  gap: 8px; /* Jarak antara ikon Font Awesome & Teks */
+  gap: 8px;
 }
 
-/* Hover Modern (Line animation dari tengah) */
 .nav-link::after {
   content: "";
   position: absolute;
@@ -283,7 +265,6 @@ body {
   color: var(--text-light);
 }
 
-/* Focus / Active Menu State */
 .nav-link.active {
   color: var(--primary-color);
   font-weight: 600;
@@ -294,7 +275,6 @@ body {
   left: 0;
 }
 
-/* Toggle Button (Sembunyi di Desktop) */
 .nav-toggle {
   display: none;
   background: none;
@@ -305,14 +285,12 @@ body {
   transition: transform var(--transition-speed) ease;
 }
 
-/* --- Responsive Breakpoint (Mobile & Tablet) --- */
 @media screen and (max-width: 768px) {
   .nav-toggle {
-    display: block; /* Muncul di mobile */
+    display: block;
     z-index: 1001;
   }
 
-  /* Animasi putar sedikit saat tombol berubah jadi 'X' */
   .nav-toggle.active {
     transform: rotate(90px);
   }
@@ -320,7 +298,7 @@ body {
   .nav-menu {
     position: fixed;
     top: 0;
-    right: -100%; /* Sembunyi di kanan layar */
+    right: -100%;
     width: 70%;
     height: 100vh;
     background-color: rgba(20, 20, 20, 0.98);
@@ -328,11 +306,10 @@ body {
     justify-content: center;
     align-items: center;
     gap: 40px;
-    transition: right var(--transition-speed) cubic-bezier(0.1, 1, 0.1, 1); /* Animasi smooth slide-in */
+    transition: right var(--transition-speed) cubic-bezier(0.1, 1, 0.1, 1);
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
   }
 
-  /* Kelas active untuk memunculkan Navbar (Show) */
   .nav-menu.show {
     right: 0;
   }
@@ -345,18 +322,16 @@ body {
   }
 }
 
-/* --- SECTION HOME STYLES --- */
 .home-section {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 80px; /* Supaya tidak tertutup navbar */
+  padding-top: 80px;
   background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
   overflow: hidden;
   position: relative;
 }
 
-/* Background Blob Hiasan (Opsional tapi bikin Modern) */
 .home-section::before {
   content: "";
   position: absolute;
@@ -378,13 +353,12 @@ body {
   margin: 0 auto;
   padding: 0 20px;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr; /* Pembagian kolom kiri dan kanan */
+  grid-template-columns: 1.2fr 0.8fr;
   gap: 50px;
   align-items: center;
   z-index: 2;
 }
 
-/* Konten Teks */
 .home-content {
   color: var(--text-light);
 }
@@ -430,7 +404,6 @@ body {
   max-width: 550px;
 }
 
-/* Tombol / Buttons */
 .home-buttons {
   display: flex;
   gap: 20px;
@@ -473,7 +446,6 @@ body {
   transform: translateY(-3px);
 }
 
-/* Media Sosial */
 .home-socials {
   display: flex;
   gap: 20px;
@@ -500,7 +472,6 @@ body {
   transform: scale(1.1);
 }
 
-/* Gambar Profil Modern */
 .home-img-container {
   display: flex;
   justify-content: center;
@@ -511,7 +482,7 @@ body {
   position: relative;
   width: 320px;
   height: 320px;
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* Efek blob organik modern */
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   background: var(--primary-color);
   animation: morphing 8s ease-in-out infinite;
   box-shadow: 0 10px 30px rgba(0, 173, 181, 0.3);
@@ -534,7 +505,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px; /* Memberi ruang untuk ikon di sekelilingnya */
+  padding: 40px;
 }
 
 .tech-icon {
@@ -558,62 +529,59 @@ body {
 .tech-icon:hover {
   transform: scale(
     1.2
-  ) !important; /* Mengabaikan sementara posisi animasi saat di-hover */
+  ) !important;
   border-color: var(--primary-color);
   cursor: pointer;
 }
 
-/* --- Penempatan Posisi (Koordinat) & Warna Ikon --- */
 .icon-html {
   top: 10px;
   left: 10px;
-  color: #e34f26; /* Warna khas HTML */
+  color: #e34f26;
   animation: floatAnimation 4s ease-in-out infinite;
 }
 
 .icon-css {
   top: 10px;
   right: 10px;
-  color: #1572b6; /* Warna khas CSS */
-  animation: floatAnimation 4.5s ease-in-out infinite 0.5s; /* Delay agar gerakannya acak */
+  color: #1572b6;
+  animation: floatAnimation 4.5s ease-in-out infinite 0.5s;
 }
 
 .icon-js {
   right: -20px;
   top: 50%;
   transform: translateY(-50%);
-  color: #f7df1e; /* Warna khas JavaScript */
+  color: #f7df1e;
   animation: floatAnimation 5s ease-in-out infinite 1s;
 }
 
 .icon-php {
   bottom: 10px;
   left: 20px;
-  color: #777bb4; /* Warna khas PHP */
+  color: #777bb4;
   animation: floatAnimation 4.2s ease-in-out infinite 0.2s;
 }
 
 .icon-mysql {
   bottom: 10px;
   right: 20px;
-  color: #00758f; /* Warna khas MySQL */
+  color: #00758f;
   animation: floatAnimation 4.8s ease-in-out infinite 0.7s;
 }
 
-/* --- ANIMASI AMBANG/FLOATING (Naik Turun Lembut) --- */
 @keyframes floatAnimation {
   0% {
     margin-top: 0px;
   }
   50% {
-    margin-top: -10px; /* Bergerak naik 10 pixel */
+    margin-top: -10px;
   }
   100% {
     margin-top: 0px;
   }
 }
 
-/* --- PENYESUAIAN RESPONSIVITAS (MOBILE) --- */
 @media screen and (max-width: 768px) {
   .profile-wrapper {
     padding: 20px;
@@ -625,7 +593,6 @@ body {
     font-size: 1.3rem;
   }
 
-  /* Perkecil jarak orbit di mobile agar tidak keluar layar */
   .icon-html {
     top: 0px;
     left: 0px;
@@ -647,8 +614,6 @@ body {
   }
 }
 
-/* --- ANIMASI --- */
-/* Animasi Kedip Kursor */
 @keyframes blink {
   from,
   to {
@@ -659,7 +624,6 @@ body {
   }
 }
 
-/* Animasi Perubahan Bentuk Frame Foto (Blob Morphing) */
 @keyframes morphing {
   0% {
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
@@ -672,7 +636,6 @@ body {
   }
 }
 
-/* --- RESPONSIVITAS MOBILE FOR HOME --- */
 @media screen and (max-width: 992px) {
   .main-title {
     font-size: 3rem;
@@ -681,14 +644,14 @@ body {
 
 @media screen and (max-width: 768px) {
   .home-container {
-    grid-template-columns: 1fr; /* Jadi satu kolom bertumpuk */
+    grid-template-columns: 1fr;
     text-align: center;
     gap: 40px;
     padding-top: 40px;
   }
 
   .home-img-container {
-    order: -1; /* Pindahkan foto ke atas teks pada mode mobile */
+    order: -1;
   }
 
   .profile-box {
@@ -709,9 +672,7 @@ body {
   }
 }
 
-/* --- SECTION HOME (HERO2) STYLES --- */
 
-/* Mengatur section pembungkus utama */
 section.home-container {
   width: 100%;
   padding: 60px 20px;
@@ -721,16 +682,14 @@ section.home-container {
   z-index: 2;
 }
 
-/* Mengatur container di dalamnya menjadi grid layout */
 section.home-container .container {
   width: 100%;
   max-width: 1200px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 kolom di desktop */
+  grid-template-columns: repeat(4, 1fr);
   gap: 25px;
 }
 
-/* Desain Card Modern (Glassmorphism) */
 .stat-card {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -746,7 +705,6 @@ section.home-container .container {
     box-shadow 0.3s ease;
 }
 
-/* Hover Modern Glow */
 .stat-card:hover {
   transform: translateY(-5px);
   border-color: rgba(0, 173, 181, 0.4);
@@ -754,7 +712,6 @@ section.home-container .container {
   background: rgba(255, 255, 255, 0.05);
 }
 
-/* Ikon di dalam kartu */
 .stat-icon {
   width: 50px;
   height: 50px;
@@ -774,7 +731,6 @@ section.home-container .container {
   color: #fff;
 }
 
-/* Teks Informasi */
 .stat-info h3 {
   font-size: 1.6rem;
   font-weight: 700;
@@ -788,20 +744,19 @@ section.home-container .container {
   white-space: nowrap;
 }
 
-/* --- RESPONSIVITAS (TABLET & MOBILE) --- */
 @media screen and (max-width: 992px) {
   section.home-container .container {
-    grid-template-columns: repeat(2, 1fr); /* Menjadi 2 kolom di tablet */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (max-width: 576px) {
   section.home-container {
-    padding: 40px 20px; /* Sedikit memperkecil padding di HP */
+    padding: 40px 20px;
   }
 
   section.home-container .container {
-    grid-template-columns: 1fr; /* Menjadi 1 kolom penuh di HP */
+    grid-template-columns: 1fr;
     gap: 15px;
   }
 
@@ -810,12 +765,11 @@ section.home-container .container {
   }
 }
 
-/* --- SECTION HOME (SERVICES HIGHLIGHT) STYLES --- */
 
 .home-services {
   width: 100%;
   padding: 80px 20px;
-  background-color: #111111; /* Variasi warna gelap tipis agar bergradasi dengan section atasnya */
+  background-color: #111111;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -826,7 +780,6 @@ section.home-container .container {
   max-width: 1200px;
 }
 
-/* Header Text */
 .services-header {
   text-align: center;
   margin-bottom: 50px;
@@ -855,14 +808,12 @@ section.home-container .container {
   border-radius: 2px;
 }
 
-/* Grid Layout */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 Kolom sejajar di desktop */
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
-/* Kartu Item Layanan */
 .service-item {
   background: #1a1a1a;
   border: 1px solid rgba(255, 255, 255, 0.02);
@@ -873,14 +824,12 @@ section.home-container .container {
   position: relative;
 }
 
-/* Efek Hover Modern: Mengangkat kartu & memberi bayangan tipis */
 .service-item:hover {
   transform: translateY(-8px);
   border-color: rgba(0, 173, 181, 0.2);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Box Ikon di Dalam Kartu */
 .service-icon-box {
   width: 60px;
   height: 60px;
@@ -901,7 +850,6 @@ section.home-container .container {
   transform: scale(1.05);
 }
 
-/* Judul & Deskripsi di dalam Kartu */
 .service-item h3 {
   color: var(--text-light);
   font-size: 1.3rem;
@@ -915,10 +863,9 @@ section.home-container .container {
   line-height: 1.6;
 }
 
-/* --- RESPONSIVITAS TIMELINE LAYANAN --- */
 @media screen and (max-width: 992px) {
   .services-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 Kolom di tablet */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -932,7 +879,7 @@ section.home-container .container {
   }
 
   .services-grid {
-    grid-template-columns: 1fr; /* 1 Kolom penuh bertumpuk di HP */
+    grid-template-columns: 1fr;
     gap: 20px;
   }
 
@@ -941,12 +888,11 @@ section.home-container .container {
   }
 }
 
-/* --- SECTION ABOUT STYLES --- */
 
 .about-section {
   width: 100%;
   padding: 100px 20px;
-  background-color: #252525; /* Sesuai tema warna gelap bawaan kamu sebelumnya */
+  background-color: #252525;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1014,7 +960,7 @@ section.home-container .container {
 
 @media screen and (max-width: 768px) {
   .about-action-wrapper {
-    text-align: center; /* Tombol otomatis ke tengah saat layar HP */
+    text-align: center;
   }
 }
 
@@ -1027,7 +973,6 @@ section.home-container .container {
   max-width: 1200px;
 }
 
-/* Header Text About */
 .about-header {
   text-align: center;
   margin-bottom: 60px;
@@ -1056,15 +1001,13 @@ section.home-container .container {
   border-radius: 2px;
 }
 
-/* Layout Grid About (2 Kolom) */
 .about-content-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Membagi rata kiri dan kanan */
+  grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: flex-start;
 }
 
-/* Kolom Kiri - Info Cerita */
 .about-info h3,
 .about-skills h3 {
   color: var(--text-light);
@@ -1086,13 +1029,12 @@ section.home-container .container {
   color: var(--primary-color);
 }
 
-/* List Detail Info */
 .about-details {
   display: grid;
   grid-template-columns: repeat(
     2,
     1fr
-  ); /* Membagi info list jadi 2 kolom internal */
+  );
   gap: 15px;
   margin-top: 30px;
   text-align: left;
@@ -1113,7 +1055,6 @@ section.home-container .container {
   color: var(--text-light);
 }
 
-/* Kolom Kanan - Kumpulan Skill Bar */
 .skill-bar-box {
   margin-bottom: 22px;
   text-align: left;
@@ -1133,7 +1074,6 @@ section.home-container .container {
   margin-right: 5px;
 }
 
-/* Line Background Progress */
 .progress-line {
   width: 100%;
   height: 8px;
@@ -1143,7 +1083,6 @@ section.home-container .container {
   overflow: hidden;
 }
 
-/* Jalur isi progress (Berwarna Cyan) */
 .progress-line span {
   height: 100%;
   background-color: var(--primary-color);
@@ -1153,11 +1092,9 @@ section.home-container .container {
   border-radius: 10px;
   display: block;
   box-shadow: 0 0 10px rgba(0, 173, 181, 0.5);
-  /* Animasi saat halaman pertama dimuat */
   animation: loadProgress 2s cubic-bezier(0.1, 1, 0.1, 1) forwards;
 }
 
-/* Penentuan lebar masing-masing progress */
 .html-progress {
   width: 90%;
 }
@@ -1174,21 +1111,19 @@ section.home-container .container {
   width: 80%;
 }
 
-/* --- ANIMASI FILL PROGRESS BAR --- */
 @keyframes loadProgress {
   from {
     width: 0%;
   }
 }
 
-/* --- RESPONSIVITAS SECTION ABOUT (TABLET & MOBILE) --- */
 @media screen and (max-width: 992px) {
   .about-content-grid {
     gap: 40px;
   }
 
   .about-details {
-    grid-template-columns: 1fr; /* Detail list menjadi 1 kolom di tablet bawah */
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1202,12 +1137,11 @@ section.home-container .container {
   }
 
   .about-content-grid {
-    grid-template-columns: 1fr; /* Menjadi 1 kolom penuh vertikal di HP */
+    grid-template-columns: 1fr;
     gap: 50px;
   }
 }
 
-/* --- GLOBAL PORTFOLIO STYLES --- */
 .portfolio-section {
   width: 100%;
   padding: 100px 20px;
@@ -1222,7 +1156,6 @@ section.home-container .container {
   max-width: 1200px;
 }
 
-/* Header */
 .portfolio-header {
   text-align: center;
   margin-bottom: 50px;
@@ -1251,14 +1184,12 @@ section.home-container .container {
   border-radius: 2px;
 }
 
-/* Grid Tampilan Desktop */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
-/* Komponen Card */
 .portfolio-card {
   background: #252525;
   border-radius: 12px;
@@ -1270,14 +1201,13 @@ section.home-container .container {
   transition:
     transform 0.3s ease,
     border-color 0.3s ease;
-  height: auto; /* Membiarkan tinggi mengikuti konten */
+  height: auto;
 }
 
 .portfolio-card:hover {
   border-color: var(--primary-color, #00adb5);
 }
 
-/* Kotak Gambar */
 .portfolio-img-box {
   width: 100%;
   height: 200px;
@@ -1290,13 +1220,12 @@ section.home-container .container {
   object-fit: cover;
 }
 
-/* Area Informasi Teks */
 .portfolio-info {
   padding: 25px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  height: auto; /* Tinggi fleksibel */
+  height: auto;
 }
 
 .portfolio-item-title {
@@ -1306,19 +1235,17 @@ section.home-container .container {
   margin-bottom: 12px;
 }
 
-/* Pengaturan Potongan Paragraf */
 .portfolio-item-desc {
   color: #b3b3b3;
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 5px;
-  max-height: 4.8em; /* Batasi tinggi standar setara 3 baris */
+  max-height: 4.8em;
   overflow: hidden;
   position: relative;
   transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Efek teks memudar di akhir baris ke-3 */
 .portfolio-item-desc::after {
   content: "";
   position: absolute;
@@ -1330,17 +1257,15 @@ section.home-container .container {
   transition: opacity 0.3s ease;
 }
 
-/* Kelas aktif saat tombol 'Baca Semuanya' diklik */
 .portfolio-item-desc.expanded {
-  max-height: 500px; /* Melonggarkan tinggi maksimal agar paragraf tampil penuh */
+  max-height: 500px;
 }
 
 .portfolio-item-desc.expanded::after {
-  opacity: 0; /* Hilangkan efek pudar saat teks terbuka penuh */
+  opacity: 0;
   pointer-events: none;
 }
 
-/* Tombol Pembuka Teks */
 .read-more-btn {
   color: var(--primary-color, #00adb5);
   font-size: 0.85rem;
@@ -1352,7 +1277,7 @@ section.home-container .container {
 }
 
 .btn-wrapper {
-  margin-top: auto; /* Dorong tombol link ke paling bawah kartu */
+  margin-top: auto;
   padding-top: 10px;
 }
 
@@ -1375,15 +1300,14 @@ section.home-container .container {
 
 .portfolio-notice {
   text-align: center;
-  color: #b3b3b3; /* Warna abu-abu tipis lembut */
+  color: #b3b3b3;
   font-size: 0.95rem;
   line-height: 1.6;
-  margin-top: 50px; /* Memberikan jarak renggang yang pas dari batas bawah card */
+  margin-top: 50px;
   padding: 0 20px;
-  font-style: italic; /* Membuat teks sedikit miring agar terkesan sebagai catatan/pemberitahuan */
+  font-style: italic;
 }
 
-/* --- RESPONSIVITAS & SLIDER MOBILE (DIPERBAIKI) --- */
 @media screen and (max-width: 992px) {
   .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1402,7 +1326,7 @@ section.home-container .container {
   }
 
   .portfolio-grid::-webkit-scrollbar {
-    display: none; /* Sembunyikan scrollbar */
+    display: none;
   }
 
   .portfolio-grid {
@@ -1410,13 +1334,12 @@ section.home-container .container {
     scrollbar-width: none;
   }
 
-  /* Perbaikan Utama Ukuran Card Mobile */
   .portfolio-card {
-    flex: 0 0 85%; /* Setiap card mengambil 85% lebar layar */
+    flex: 0 0 85%;
     scroll-snap-align: center;
     display: flex;
     flex-direction: column;
-    height: min-content; /* Memaksa tinggi menyesuaikan konten secara dinamis */
+    height: min-content;
   }
 
   .portfolio-info {
@@ -1425,8 +1348,8 @@ section.home-container .container {
   }
 
   .portfolio-item-desc {
-    overflow: hidden; /* Mencegah luapan teks ke samping */
-    word-wrap: break-word; /* Memaksa bungkus teks vertikal kebawah jika terlalu panjang */
+    overflow: hidden;
+    word-wrap: break-word;
   }
 
   .portfolio-title {
@@ -1439,11 +1362,10 @@ section.home-container .container {
   }
 }
 
-/* --- CONTACT SECTION STYLES --- */
 .contact-section {
   width: 100%;
   padding: 100px 20px;
-  background-color: #252525; /* Menyesuaikan background lama kamu */
+  background-color: #252525;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1454,7 +1376,6 @@ section.home-container .container {
   max-width: 1100px;
 }
 
-/* Header */
 .contact-header {
   text-align: center;
   margin-bottom: 60px;
@@ -1483,7 +1404,6 @@ section.home-container .container {
   border-radius: 2px;
 }
 
-/* Grid Layout */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
@@ -1491,7 +1411,6 @@ section.home-container .container {
   align-items: start;
 }
 
-/* Sisi Kiri: Info */
 .contact-info-title {
   color: #ffffff;
   font-size: 1.6rem;
@@ -1560,7 +1479,6 @@ section.home-container .container {
   text-decoration: underline;
 }
 
-/* Sisi Kanan: Form */
 .contact-form-wrapper {
   background: #1a1a1a;
   padding: 40px;
@@ -1608,7 +1526,6 @@ section.home-container .container {
   box-shadow: 0 0 8px rgba(0, 173, 181, 0.2);
 }
 
-/* Tombol Kirim */
 .contact-submit-btn {
   width: 100%;
   padding: 14px;
@@ -1627,10 +1544,9 @@ section.home-container .container {
   transform: translateY(-2px);
 }
 
-/* --- RESPONSIF UTK LAYAR HP --- */
 @media screen and (max-width: 850px) {
   .contact-grid {
-    grid-template-columns: 1fr; /* Berubah jadi satu kolom memanjang ke bawah */
+    grid-template-columns: 1fr;
     gap: 40px;
   }
 
@@ -1648,7 +1564,6 @@ section.home-container .container {
   }
 }
 
-/* Modal Popup Success */
 .modal-overlay {
   display: none;
   position: fixed;
@@ -1666,12 +1581,10 @@ section.home-container .container {
   display: flex;
 }
 
-/* Aktifkan Modal */
 .modal-overlay.show {
   display: flex;
 }
 
-/* Box Utama Popup */
 .modal-box {
   background: #1a1a1a;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -1682,14 +1595,13 @@ section.home-container .container {
   text-align: center;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
   transform: scale(0.7);
-  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); /* Efek memantul/bounce smooth */
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .modal-overlay.show .modal-box {
   transform: scale(1);
 }
 
-/* Wrapper Ikon Centang */
 .success-icon-wrapper {
   display: flex;
   justify-content: center;
@@ -1706,7 +1618,6 @@ section.home-container .container {
   justify-content: center;
 }
 
-/* --- ANIMASI SVG CHECKMARK --- */
 .checkmark {
   width: 50px;
   height: 50px;
@@ -1755,7 +1666,6 @@ section.home-container .container {
   }
 }
 
-/* Teks di Dalam Modal */
 .modal-title {
   color: #ffffff;
   font-size: 1.6rem;
@@ -1775,7 +1685,6 @@ section.home-container .container {
   font-weight: 600;
 }
 
-/* Tombol Selesai / Tutup */
 .modal-close-btn {
   width: 100%;
   padding: 12px;
@@ -1795,7 +1704,6 @@ section.home-container .container {
   box-shadow: 0 0 15px rgba(0, 173, 181, 0.4);
 }
 
-/* Responsif Layar Kecil */
 @media screen and (max-width: 480px) {
   .modal-box {
     padding: 30px 20px;
@@ -1808,10 +1716,8 @@ section.home-container .container {
   }
 }
 
-/* Footer */
-/* --- FOOTER STYLES --- */
 .portfolio-footer {
-  background-color: #1a1a1a; /* Warna gelap senada dengan section portfolio */
+  background-color: #1a1a1a;
   padding: 50px 20px 30px 20px;
   width: 100%;
   display: flex;
@@ -1826,7 +1732,6 @@ section.home-container .container {
   flex-direction: column;
 }
 
-/* Bagian Atas Footer */
 .footer-top {
   display: flex;
   justify-content: space-between;
@@ -1843,7 +1748,7 @@ section.home-container .container {
 }
 
 .footer-brand h3 span {
-  color: var(--primary-color, #00adb5); /* Warna aksen cyan */
+  color: var(--primary-color, #00adb5);
 }
 
 .footer-brand p {
@@ -1853,7 +1758,6 @@ section.home-container .container {
   line-height: 1.5;
 }
 
-/* Sosmed Icons */
 .footer-socials {
   display: flex;
   gap: 15px;
@@ -1881,7 +1785,6 @@ section.home-container .container {
   box-shadow: 0 5px 15px rgba(0, 173, 181, 0.3);
 }
 
-/* Garis Pembatas */
 .footer-divider {
   width: 100%;
   height: 1px;
@@ -1889,7 +1792,6 @@ section.home-container .container {
   margin: 35px 0 25px 0;
 }
 
-/* Bagian Bawah Footer */
 .footer-bottom {
   display: flex;
   justify-content: space-between;
@@ -1922,17 +1824,15 @@ section.home-container .container {
 }
 
 .footer-nav a i {
-  margin-right: 6px; /* Memberikan jarak antara ikon dan teks */
-  font-size: 0.85rem; /* Ukuran ikon sedikit disesuaikan agar proporsional */
+  margin-right: 6px;
+  font-size: 0.85rem;
   transition: color 0.2s ease;
 }
 
-/* Mengubah warna ikon menjadi cerah saat menu di-hover */
 .footer-nav a:hover i {
   color: var(--primary-color, #00adb5);
 }
 
-/* --- RESPONSIVITAS FOOTER (HP) --- */
 @media screen and (max-width: 768px) {
   .footer-top {
     flex-direction: column;
@@ -1945,7 +1845,7 @@ section.home-container .container {
   }
 
   .footer-bottom {
-    flex-direction: column-reverse; /* Menyusun copyright di paling bawah di layar HP */
+    flex-direction: column-reverse;
     gap: 20px;
     text-align: center;
   }
